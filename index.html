@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>هيلتوب بيرجولا | برجولات فاخرة بتصميمات عصرية</title>
+    <meta name="description"
+        content="اكتشف أفخم برجولات الحدائق والأسطح في مصر. برجولات خشب، ألومنيوم، وحديد مشغول بأسعار تنافسية. احجز زيارة مجانية الآن!">
+    <meta name="keywords" content="برجولات, برجولة خشب, برجولة ألومنيوم, تنسيق حدائق, ديكورات خارجية, مصر">
+    <link rel="icon" type="image/png" href="assets/hero1.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        teal: {
+                            50: '#f0fdfa',
+                            100: '#ccfbf1',
+                            200: '#99f6e4',
+                            300: '#5eead4',
+                            400: '#2DD4BF',
+                            500: '#14B8A6',
+                            600: '#0D9488',
+                            700: '#0F766E',
+                            800: '#115E59',
+                            900: '#134e4a',
+                        },
+                        turquoise: {
+                            400: '#22D3EE',
+                            500: '#06B6D4',
+                            600: '#0891B2',
+                        },
+                        lime: {
+                            400: '#A3E635',
+                            500: '#84CC16',
+                            600: '#65A30D',
+                        },
+                        sand: {
+                            50: '#fdf8f0',
+                            100: '#f5ead6',
+                            200: '#e8d5b0',
+                            300: '#d4b987',
+                            400: '#c4a06a',
+                            500: '#b08d55',
+                        },
+                    },
+                    fontFamily: {
+                        cairo: ['Cairo', 'sans-serif'],
+                    },
+                },
+            },
+        };
+    </script>
+
+    <style>
+        /* ===================== BASE ===================== */
+        html, body {
+            overflow-x: hidden;
+            max-width: 100vw;
+            scroll-behavior: smooth;
+        }
+
+        * {
+            font-family: 'Cairo', sans-serif;
+            box-sizing: border-box;
+        }
+
+        /* ===================== GRADIENTS ===================== */
+        .gradient-teal {
+            background: linear-gradient(135deg, #0D9488 0%, #06B6D4 50%, #22D3EE 100%);
+        }
+
+        .gradient-lime {
+            background: linear-gradient(135deg, #65A30D 0%, #84CC16 100%);
+        }
+
+        .gradient-bg {
+            background: linear-gradient(180deg, #f0fdfa 0%, #e4e7eb 30%, #f5ead6 100%);
+        }
+
+        .gradient-dark {
+            background: linear-gradient(135deg, #022f36 0%, #0D9488 100%);
+        }
+
+        /* ===================== GLASSMORPHISM ===================== */
+        .glass {
+            backdrop-filter: blur(16px) saturate(180%);
+            background: rgba(255, 255, 255, 0.75);
+        }
+
+        .glass-dark {
+            backdrop-filter: blur(16px) saturate(180%);
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        /* ===================== NAVBAR ===================== */
+        #navbar {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        #navbar.scrolled {
+            backdrop-filter: blur(20px) saturate(200%);
+            background: rgba(255, 255, 255, 0.88);
+            box-shadow: 0 4px 30px rgba(13, 148, 136, 0.1);
+        }
+
+        /* ===================== BUTTONS ===================== */
+        .btn-primary {
+            background: linear-gradient(135deg, #0D9488 0%, #06B6D4 100%);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, transparent, rgba(255,255,255,0.2), transparent);
+            transform: translateX(-100%);
+            transition: transform 0.5s;
+        }
+
+        .btn-primary:hover::after {
+            transform: translateX(100%);
+        }
+
+        .btn-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(13, 148, 136, 0.4);
+        }
+
+        .btn-cta {
+            background: linear-gradient(135deg, #65A30D 0%, #84CC16 100%);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-cta::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, transparent, rgba(255,255,255,0.2), transparent);
+            transform: translateX(-100%);
+            transition: transform 0.5s;
+        }
+
+        .btn-cta:hover::after {
+            transform: translateX(100%);
+        }
+
+        .btn-cta:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 40px rgba(101, 163, 13, 0.5);
+        }
+
+        /* ===================== CARDS ===================== */
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px rgba(13, 148, 136, 0.15);
+        }
+
+        /* ===================== ANIMATIONS ===================== */
+        .fade-in {
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .slide-up {
+            animation: slideUp 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(60px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-12px); }
+        }
+
+        .animate-float {
+            animation: float 4s ease-in-out infinite;
+        }
+
+        @keyframes shimmer {
+            0% { background-position: -200% center; }
+            100% { background-position: 200% center; }
+        }
+
+        .shimmer-text {
+            background: linear-gradient(90deg, #0D9488, #22D3EE, #84CC16, #0D9488);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: shimmer 4s linear infinite;
+        }
+
+        .price-bounce {
+            animation: priceBounce 0.3s ease;
+        }
+
+        @keyframes priceBounce {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.15); }
+            100% { transform: scale(1); }
+        }
+
+        /* Scroll animations */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .animate-on-scroll.animate-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ===================== FILTER BUTTONS ===================== */
+        .filter-btn {
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn.active {
+            background: linear-gradient(135deg, #0D9488 0%, #06B6D4 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(13, 148, 136, 0.3);
+        }
+
+        /* ===================== SCROLLBAR ===================== */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f0fdfa;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, #0D9488, #06B6D4);
+            border-radius: 3px;
+        }
+
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* ===================== SAFE AREAS ===================== */
+        .safe-bottom {
+            padding-bottom: env(safe-area-inset-bottom);
+        }
+
+        .safe-top {
+            padding-top: env(safe-area-inset-top);
+        }
+
+        /* ===================== HERO SPECIFIC ===================== */
+        .hero-section {
+            position: relative;
+        }
+
+        /* ===================== GLOW EFFECTS ===================== */
+        .glow-teal {
+            box-shadow: 0 0 60px rgba(13, 148, 136, 0.15);
+        }
+
+        .glow-lime {
+            box-shadow: 0 0 40px rgba(132, 204, 22, 0.2);
+        }
+
+        /* ===================== RADIO CUSTOM ===================== */
+        input[type="radio"]:checked {
+            background-color: #0D9488;
+            border-color: #0D9488;
+        }
+
+        /* ===================== SECTION DIVIDER ===================== */
+        .section-divider {
+            background: linear-gradient(90deg, transparent, rgba(13, 148, 136, 0.2), transparent);
+            height: 1px;
+        }
+
+        /* ===================== RESPONSIVE OVERRIDES ===================== */
+        @media (max-width: 768px) {
+            .hero-section {
+                height: 70vh;
+                min-height: 400px;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .hero-section {
+                height: 80vh;
+                min-height: 550px;
+            }
+        }
+    </style>
+</head>
+
+<body class="gradient-bg min-h-screen overflow-x-hidden">
+
+    <!-- ===================== NAVBAR ===================== -->
+    <nav id="navbar"
+        class="safe-top fixed top-0 left-0 right-0 w-full z-50 bg-white/60 backdrop-blur-md border-b border-white/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 md:h-20">
+
+                <div class="flex items-center gap-4">
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-btn"
+                        class="md:hidden text-teal-700 p-1 hover:bg-teal-50 rounded-lg transition-colors">
+                        <i class="bi bi-list text-3xl"></i>
+                    </button>
+
+                    <!-- Logo -->
+                    <a href="#" class="flex items-center gap-3 group">
+                        <div class="w-10 h-10 md:w-12 md:h-12 rounded-xl overflow-hidden shadow-lg transition-transform duration-300 group-hover:scale-110">
+                            <div class="w-full h-full bg-black flex items-center justify-center">
+                                <span class="text-lime-400 font-black text-lg md:text-xl">HT</span>
+                            </div>
+                        </div>
+                        <div class="hidden sm:block">
+                            <span class="text-teal-800 font-extrabold text-lg md:text-xl block leading-tight">Hilltop</span>
+                            <span class="text-teal-600 text-xs font-medium -mt-1 block">Pergolas</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Desktop Nav -->
+                <div class="hidden md:flex items-center gap-6">
+                    <a href="#hero"
+                        class="text-gray-700 hover:text-teal-600 font-semibold transition-colors">الرئيسية</a>
+                    <a href="#products"
+                        class="text-gray-700 hover:text-teal-600 font-semibold transition-colors">المنتجات</a>
+                    <a href="#portfolio"
+                        class="text-gray-700 hover:text-teal-600 font-semibold transition-colors">أعمالنا</a>
+                    <a href="#visit"
+                        class="text-gray-700 hover:text-teal-600 font-semibold transition-colors">حجز زيارة</a>
+                </div>
+
+                <!-- Cart Button -->
+                <button onclick="toggleCartPanel()" id="cart-btn"
+                    class="relative p-3 rounded-xl bg-white/80 hover:bg-white shadow-lg transition-all hover:scale-105 border border-gray-100">
+                    <svg class="w-6 h-6 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg>
+                    <span id="cart-count"
+                        class="absolute -top-1 -right-1 w-5 h-5 bg-lime-500 text-white text-xs font-bold rounded-full flex items-center justify-center hidden shadow-sm">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===================== HERO SLIDER SECTION ===================== -->
+    <section id="hero" class="hero-section relative pt-16 md:pt-20">
+        <!-- Slider Container -->
+        <div id="hero-slider" class="absolute inset-0 w-full h-full"></div>
+
+        <!-- Navigation Arrows -->
+        <button onclick="prevSlide()"
+            class="absolute top-1/2 right-4 md:right-8 -translate-y-1/2 z-20 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/40 text-white flex items-center justify-center transition-all hover:scale-110">
+            <i class="bi bi-chevron-right text-xl"></i>
+        </button>
+        <button onclick="nextSlide()"
+            class="absolute top-1/2 left-4 md:left-8 -translate-y-1/2 z-20 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/40 text-white flex items-center justify-center transition-all hover:scale-110">
+            <i class="bi bi-chevron-left text-xl"></i>
+        </button>
+
+        <!-- CTA Button on Hero -->
+        <div class="absolute bottom-28 md:bottom-32 right-8 md:right-16 z-20">
+            <button onclick="scrollToProducts()"
+                class="btn-cta text-white px-8 py-3 md:px-10 md:py-4 rounded-2xl font-bold text-base md:text-lg shadow-2xl flex items-center gap-2 group">
+                اكتشف منتجاتنا
+                <i class="bi bi-arrow-left transition-transform duration-300 group-hover:-translate-x-1"></i>
+            </button>
+        </div>
+
+        <!-- Thumbnail Strip -->
+        <div class="absolute bottom-4 md:bottom-6 left-1/2 -translate-x-1/2 z-20">
+            <div id="hero-thumbs" class="flex gap-2 md:gap-3 px-4 py-2 rounded-2xl bg-black/30 backdrop-blur-sm">
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== FEATURES STRIP ===================== -->
+    <section class="py-8 md:py-12 bg-white/80 backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+                <div class="flex items-center gap-3 p-4 rounded-2xl bg-gradient-to-br from-teal-50 to-turquoise-50/50 border border-teal-100/50 animate-on-scroll">
+                    <div class="w-12 h-12 rounded-xl gradient-teal flex items-center justify-center flex-shrink-0">
+                        <i class="bi bi-shield-check text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-gray-800 text-sm">ضمان 10 سنوات</h4>
+                        <p class="text-xs text-gray-500">على جميع المنتجات</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 p-4 rounded-2xl bg-gradient-to-br from-sand-50 to-sand-100/50 border border-sand-200/50 animate-on-scroll">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-sand-400 to-sand-500 flex items-center justify-center flex-shrink-0">
+                        <i class="bi bi-tools text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-gray-800 text-sm">تركيب مجاني</h4>
+                        <p class="text-xs text-gray-500">في جميع المحافظات</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 p-4 rounded-2xl bg-gradient-to-br from-lime-50 to-green-50 border border-lime-100/50 animate-on-scroll">
+                    <div class="w-12 h-12 rounded-xl gradient-lime flex items-center justify-center flex-shrink-0">
+                        <i class="bi bi-calendar-check text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-gray-800 text-sm">زيارة مجانية</h4>
+                        <p class="text-xs text-gray-500">معاينة وقياس الموقع</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 p-4 rounded-2xl bg-gradient-to-br from-purple-50 to-indigo-50 border border-purple-100/50 animate-on-scroll">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-indigo-500 flex items-center justify-center flex-shrink-0">
+                        <i class="bi bi-palette text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-gray-800 text-sm">تصميم مخصص</h4>
+                        <p class="text-xs text-gray-500">حسب مساحتك وذوقك</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== PRODUCTS SECTION ===================== -->
+    <section id="products" class="py-12 md:py-20 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-10 animate-on-scroll">
+                <span class="inline-block px-4 py-1.5 bg-teal-100 text-teal-700 text-sm font-bold rounded-full mb-4">منتجاتنا المميزة</span>
+                <h2 class="text-3xl md:text-5xl font-extrabold text-gray-800 mb-3">
+                    اختر <span class="shimmer-text">البرجولة المثالية</span>
+                </h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">تشكيلة واسعة من البرجولات بمختلف الخامات والمقاسات لتناسب كل مساحة وميزانية</p>
+            </div>
+
+            <!-- Category Filters -->
+            <div class="flex flex-wrap gap-2 md:gap-3 justify-center mb-8 animate-on-scroll">
+                <button onclick="filterProducts('all')" data-filter="all" class="filter-btn active px-5 py-2 rounded-full text-sm font-bold border border-gray-200 bg-white hover:bg-gray-50 transition-all">
+                    الكل
+                </button>
+                <button onclick="filterProducts('wooden')" data-filter="wooden" class="filter-btn px-5 py-2 rounded-full text-sm font-bold border border-gray-200 bg-white hover:bg-gray-50 transition-all">
+                    🪵 خشب
+                </button>
+                <button onclick="filterProducts('aluminum')" data-filter="aluminum" class="filter-btn px-5 py-2 rounded-full text-sm font-bold border border-gray-200 bg-white hover:bg-gray-50 transition-all">
+                    ⚙️ ألومنيوم
+                </button>
+                <button onclick="filterProducts('steel')" data-filter="steel" class="filter-btn px-5 py-2 rounded-full text-sm font-bold border border-gray-200 bg-white hover:bg-gray-50 transition-all">
+                    🔩 حديد
+                </button>
+                <button onclick="filterProducts('premium')" data-filter="premium" class="filter-btn px-5 py-2 rounded-full text-sm font-bold border border-gray-200 bg-white hover:bg-gray-50 transition-all">
+                    ✨ بريميوم
+                </button>
+            </div>
+
+            <!-- Products Grid -->
+            <div id="products-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 md:gap-8">
+                <!-- Products rendered by JS -->
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider max-w-4xl mx-auto"></div>
+
+    <!-- ===================== PORTFOLIO SECTION ===================== -->
+    <section id="portfolio" class="py-12 md:py-20 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-10 animate-on-scroll">
+                <span class="inline-block px-4 py-1.5 bg-sand-100 text-sand-500 text-sm font-bold rounded-full mb-4">معرض أعمالنا</span>
+                <h2 class="text-3xl md:text-5xl font-extrabold text-gray-800 mb-3">
+                    مشاريع <span class="text-teal-600">نفخر بها</span>
+                </h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">نماذج من أعمالنا السابقة مع عملائنا الكرام</p>
+            </div>
+
+            <div id="portfolio-grid" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+                <!-- Portfolio cards rendered by JS -->
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider max-w-4xl mx-auto"></div>
+
+    <!-- ===================== VISIT DATE SECTION ===================== -->
+    <section id="visit" class="py-12 md:py-20 px-4">
+        <div class="max-w-3xl mx-auto">
+            <div class="text-center mb-10 animate-on-scroll">
+                <span class="inline-block px-4 py-1.5 bg-lime-100 text-lime-700 text-sm font-bold rounded-full mb-4">احجز موعدك</span>
+                <h2 class="text-3xl md:text-5xl font-extrabold text-gray-800 mb-3">
+                    حدد موعد <span class="text-lime-600">زيارة المعرض</span>
+                </h2>
+                <p class="text-gray-600">اختر التاريخ المناسب وفريقنا سيكون في انتظارك</p>
+            </div>
+
+            <div class="bg-white rounded-3xl shadow-xl p-6 md:p-10 glow-teal animate-on-scroll">
+                <!-- Visit Date Picker -->
+                <div class="mb-8">
+                    <label for="visit-date" class="block text-gray-700 font-bold mb-3 text-lg">
+                        <i class="bi bi-calendar-event text-teal-600 ml-2"></i>
+                        موعد الزيارة المفضل
+                    </label>
+                    <input type="date" id="visit-date" required
+                        class="w-full p-4 rounded-xl border-2 border-gray-200 focus:border-teal-500 focus:ring-4 focus:ring-teal-100 transition-all text-lg text-center font-bold text-gray-700 bg-gray-50">
+                </div>
+
+                <!-- Request Form -->
+                <div id="request-form-section" class="">
+                    <form id="request-form" class="space-y-5">
+                        <div class="section-divider mb-6"></div>
+                        <h3 class="font-bold text-xl text-gray-800 flex items-center gap-2 mb-4">
+                            <i class="bi bi-person-lines-fill text-teal-600"></i>
+                            بياناتك الشخصية
+                        </h3>
+
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <label for="customer-name" class="block text-gray-600 font-medium mb-2 text-sm">الاسم *</label>
+                                <input type="text" id="customer-name" required
+                                    class="w-full p-3.5 rounded-xl border-2 border-gray-200 focus:border-teal-500 focus:ring-4 focus:ring-teal-100 transition-all"
+                                    placeholder="أدخل اسمك الكامل">
+                            </div>
+                            <div>
+                                <label for="customer-phone" class="block text-gray-600 font-medium mb-2 text-sm">رقم الهاتف *</label>
+                                <input type="tel" id="customer-phone" required dir="ltr"
+                                    class="w-full p-3.5 rounded-xl border-2 border-gray-200 focus:border-teal-500 focus:ring-4 focus:ring-teal-100 transition-all"
+                                    placeholder="01XXXXXXXXX">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="customer-notes" class="block text-gray-600 font-medium mb-2 text-sm">ملاحظات (اختياري)</label>
+                            <textarea id="customer-notes" rows="3"
+                                class="w-full p-3.5 rounded-xl border-2 border-gray-200 focus:border-teal-500 focus:ring-4 focus:ring-teal-100 transition-all resize-none"
+                                placeholder="أي تفاصيل إضافية تود مشاركتها معنا..."></textarea>
+                        </div>
+
+                        <!-- Cart Summary in Form -->
+                        <div id="form-cart-summary" class="bg-gradient-to-br from-teal-50 to-turquoise-50/30 rounded-2xl p-4 border border-teal-100 hidden">
+                            <h4 class="font-bold text-teal-800 text-sm mb-3 flex items-center gap-2">
+                                <i class="bi bi-cart-check"></i>
+                                ملخص طلبك
+                            </h4>
+                            <div id="form-cart-items" class="space-y-2 text-sm"></div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" id="submit-btn"
+                            class="w-full btn-cta text-white py-4 md:py-5 rounded-2xl font-bold text-lg shadow-2xl flex items-center justify-center gap-3 mt-6">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+                            </svg>
+                            إرسال الطلب عبر واتساب
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== CART POPUP ===================== -->
+    <div id="cart-popup"
+        class="fixed bottom-4 left-4 right-4 md:left-auto md:right-4 md:w-[420px] bg-white rounded-2xl shadow-2xl z-50 hidden border border-teal-100 overflow-hidden">
+        <!-- Header -->
+        <div class="flex items-center justify-between p-4 bg-gradient-to-l from-teal-50 to-white border-b border-gray-100">
+            <h4 class="font-bold text-gray-800 flex items-center gap-2">
+                <i class="bi bi-cart3 text-teal-600"></i>
+                السلة
+            </h4>
+            <button onclick="closeCartPopup()" class="text-gray-400 hover:text-gray-600 transition-colors p-1">
+                <i class="bi bi-x-lg"></i>
+            </button>
+        </div>
+        <!-- Items -->
+        <div id="cart-popup-items" class="max-h-72 overflow-y-auto hide-scrollbar p-4 space-y-3"></div>
+        <!-- Footer -->
+        <div class="p-4 bg-gradient-to-l from-lime-50 to-white border-t border-gray-100">
+            <div class="flex items-center justify-between mb-3">
+                <span class="font-bold text-gray-800">الإجمالي:</span>
+                <span class="font-extrabold text-xl text-teal-600"><span id="cart-popup-total">0</span> جنيه</span>
+            </div>
+            <button onclick="scrollToSection('visit')" class="w-full btn-cta text-white py-3 rounded-xl font-bold text-sm flex items-center justify-center gap-2">
+                <i class="bi bi-whatsapp"></i>
+                أكمل الطلب
+            </button>
+        </div>
+    </div>
+
+    <!-- ===================== FLOATING MOBILE CART BUTTON ===================== -->
+    <button id="floating-cart-btn" onclick="toggleCartPanel()"
+        class="md:hidden fixed bottom-6 right-6 z-[80] bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white rounded-full p-4 shadow-2xl transition-all duration-300 hover:scale-110 hidden">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+        </svg>
+        <span id="floating-cart-count"
+            class="absolute -top-2 -right-2 min-w-[28px] h-7 bg-gradient-to-r from-lime-400 to-green-500 text-white text-xs font-black rounded-full flex items-center justify-center shadow-lg border-2 border-white">0</span>
+    </button>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="bg-gradient-to-b from-gray-900 to-gray-950 text-white py-12 md:py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <!-- Brand -->
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-black border border-gray-700 flex items-center justify-center">
+                            <span class="text-lime-400 font-black text-lg">HT</span>
+                        </div>
+                        <div>
+                            <span class="font-extrabold text-xl block leading-tight">Hilltop</span>
+                            <span class="text-gray-400 text-xs block">Pergolas</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed">هيلتوب بيرجولا - متخصصون في تصميم وتنفيذ أفخم البرجولات في مصر. نحوّل مساحتك الخارجية إلى واحة من الجمال والراحة.</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-bold text-lg mb-4 text-teal-400">روابط سريعة</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#hero" class="text-gray-400 hover:text-white transition-colors text-sm">الرئيسية</a></li>
+                        <li><a href="#products" class="text-gray-400 hover:text-white transition-colors text-sm">المنتجات</a></li>
+                        <li><a href="#portfolio" class="text-gray-400 hover:text-white transition-colors text-sm">أعمالنا</a></li>
+                        <li><a href="#visit" class="text-gray-400 hover:text-white transition-colors text-sm">حجز زيارة</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="font-bold text-lg mb-4 text-teal-400">تواصل معنا</h4>
+                    <div class="space-y-3">
+                        <a href="tel:+201XXXXXXXXX" class="flex items-center gap-3 text-gray-400 hover:text-white transition-colors text-sm">
+                            <i class="bi bi-telephone text-teal-500"></i>
+                            01X XXXX XXXX
+                        </a>
+                        <a href="https://wa.me/201XXXXXXXXX" target="_blank" class="flex items-center gap-3 text-gray-400 hover:text-white transition-colors text-sm">
+                            <i class="bi bi-whatsapp text-green-500"></i>
+                            واتساب
+                        </a>
+                        <a href="#" class="flex items-center gap-3 text-gray-400 hover:text-white transition-colors text-sm">
+                            <i class="bi bi-geo-alt text-red-400"></i>
+                            القاهرة، مصر
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-6 text-center">
+                <p class="text-gray-500 text-sm">© 2026 Hilltop Pergolas - جميع الحقوق محفوظة</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===================== MOBILE MENU OVERLAY ===================== -->
+    <div id="mobile-menu" class="fixed inset-0 bg-white z-[9999]"
+        style="display: none; width: 100vw; height: 100vh; position: fixed; top: 0; left: 0;">
+        <div class="flex flex-col justify-center items-center h-full w-full gap-8 relative">
+            <button id="close-mobile-menu"
+                class="absolute top-8 right-8 text-gray-700 hover:text-red-500 p-3 transition-colors z-[10000] bg-gray-100 rounded-full">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+            <div class="w-20 h-20 rounded-2xl bg-black flex items-center justify-center shadow-2xl mb-4">
+                <span class="text-lime-400 font-black text-3xl">HT</span>
+            </div>
+            <nav class="flex flex-col items-center gap-6">
+                <a href="#hero"
+                    class="mobile-link text-2xl font-black text-gray-800 hover:text-teal-600 transition-colors">الرئيسية</a>
+                <a href="#products"
+                    class="mobile-link text-2xl font-black text-gray-800 hover:text-teal-600 transition-colors">المنتجات</a>
+                <a href="#portfolio"
+                    class="mobile-link text-2xl font-black text-gray-800 hover:text-teal-600 transition-colors">أعمالنا</a>
+                <a href="#visit"
+                    class="mobile-link text-2xl font-black text-gray-800 hover:text-teal-600 transition-colors">حجز زيارة</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- ===================== SCRIPTS ===================== -->
+    <script src="shared.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            initPage();
+        });
+    </script>
+
+</body>
+
+</html>
