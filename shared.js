@@ -419,7 +419,7 @@ function generateWhatsAppMessage() {
     message += `• الاسم: ${customerName}\n`;
     message += `• رقم الهاتف: ${customerPhone}\n`;
     if (customerNotes) {
-        message += `• ملاحظات: ${customerNotes}\n`;
+        message += `• العنوان بالتفصيل: ${customerNotes}\n`;
     }
 
     message += `\n━━━━━━━━━━━━━━━━━\n`;
