@@ -423,7 +423,7 @@ function generateWhatsAppMessage() {
     }
 
     message += `\n━━━━━━━━━━━━━━━━━\n`;
-    message += `✨ شكراً لاختياركم هيلتوب بيرجولا`;
+    message += `✨ شكراً لاختياركم هيلتوب`;
 
     return message;
 }
