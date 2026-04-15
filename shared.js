@@ -355,7 +355,7 @@ function getCategoryLabel(category) {
         wooden: 'خشب طبيعي',
         aluminum: 'ألومنيوم',
         steel: 'حديد مشغول',
-        premium: 'بريميوم',
+        premium: 'خشب WPC',
     };
     return labels[category] || category;
 }
