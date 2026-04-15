@@ -1,11 +1,10 @@
 // ===================== PRODUCTS DATA =====================
 const products = [
     // Wooden Pergolas
-    { id: 1, name: 'Olive Wood', category: 'wooden', basePrice: 15000, image: 'assets/product3.jpeg', description: 'خشب طبيعي معالج ضد الرطوبة والحشرات' },
-    { id: 2, name: 'Forest Line', category: 'wooden', basePrice: 18000, image: 'assets/product4.jpeg', description: 'تصميم عصري بشرائح خشبية متحركة' },
-    { id: 3, name: 'Oak Shadow', category: 'wooden', basePrice: 22000, image: 'assets/product5.jpeg', description: 'زخارف كلاسيكية فاخرة مع نقوش يدوية' },
+    { id: 1, name: 'Oak Shadow', category: 'wooden', basePrice: 22000, image: 'assets/product5.jpeg', description: 'زخارف كلاسيكية فاخرة مع نقوش يدوية' },
+    { id: 2, name: 'Olive Wood', category: 'wooden', basePrice: 15000, image: 'assets/product3.jpeg', description: 'خشب طبيعي معالج ضد الرطوبة والحشرات' },
+    { id: 3, name: 'Forest Line', category: 'wooden', basePrice: 18000, image: 'assets/product4.jpeg', description: 'تصميم عصري بشرائح خشبية متحركة' },
     { id: 4, name: 'Palm Breeze', category: 'wooden', basePrice: 22000, image: 'assets/product6.jpeg', description: 'زخارف كلاسيكية فاخرة مع نقوش يدوية' },
-
     // Aluminum Pergolas
     { id: 5, name: 'Royal Shade', category: 'aluminum', basePrice: 35000, image: 'assets/product2.png', description: 'شرائح متحركة آلية مع ريموت كنترول' },
     { id: 6, name: 'Majestic', category: 'aluminum', basePrice: 28000, image: 'assets/product7.jpeg', description: 'ألومنيوم مقاوم للصدأ بتصميم عصري' },
@@ -18,7 +17,6 @@ const products = [
     { id: 11, name: 'Golden', category: 'premium', basePrice: 45000, image: 'assets/product13.jpeg', description: 'سقف مميز مع لمسة عصرية' },
     { id: 12, name: 'Crown', category: 'premium', basePrice: 25000, image: 'assets/product14.jpeg', description: 'مزيج من الخشب الطبيعي مع المعدن المشغول' },
     { id: 13, name: 'Elite', category: 'premium', basePrice: 25000, image: 'assets/product15.jpeg', description: 'مزيج من الخشب الطبيعي مع المعدن المشغول' },
-
 ];
 
 // Dimension options & price additions for each product
@@ -399,7 +397,7 @@ function generateWhatsAppMessage() {
     const customerNotes = document.getElementById('customer-notes')?.value || '';
     const visitDate = document.getElementById('visit-date')?.value || '';
 
-    let message = `مرحبا، أرغب في حجز زيارة\n`;
+    let message = `مرحبا، أرغب في حجز معاينة\n`;
     message += `━━━━━━━━━━━━━━━━━\n\n`;
 
     cart.forEach((item, index) => {
@@ -414,7 +412,7 @@ function generateWhatsAppMessage() {
     message += `💰 *الإجمالي:* ${total.toLocaleString('ar-EG')} جنيه\n\n`;
 
     if (visitDate) {
-        message += `📅 *تاريخ الزيارة:* ${visitDate}\n\n`;
+        message += `📅 *تاريخ المعاينة:* ${visitDate}\n\n`;
     }
 
     message += `👤 *بيانات العميل:*\n`;
@@ -443,7 +441,7 @@ function handleFormSubmit(e) {
     }
 
     if (!visitDate) {
-        showToast('الرجاء تحديد موعد الزيارة', 'error');
+        showToast('الرجاء تحديد موعد المعاينة', 'error');
         return;
     }
 
@@ -461,7 +459,7 @@ function handleFormSubmit(e) {
     setTimeout(() => {
         const message = generateWhatsAppMessage();
         // Replace with actual WhatsApp number
-        const whatsappUrl = `https://wa.me/201XXXXXXXXX?text=${encodeURIComponent(message)}`;
+        const whatsappUrl = `https://wa.me/201550796114?text=${encodeURIComponent(message)}`;
 
         // Clear cart
         clearCart();
