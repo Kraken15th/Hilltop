@@ -1,34 +1,36 @@
 // ===================== PRODUCTS DATA =====================
 const products = [
     // Wooden Pergolas
-    { id: 1, name: 'برجولة خشب طبيعي كلاسيك', category: 'wooden', basePrice: 15000, image: 'assets/hero1.png', description: 'خشب طبيعي معالج ضد الرطوبة والحشرات' },
-    { id: 2, name: 'برجولة خشب مودرن بشرائح', category: 'wooden', basePrice: 18000, image: 'assets/product1.png', description: 'تصميم عصري بشرائح خشبية متحركة' },
-    { id: 3, name: 'برجولة خشب ريفي مزخرفة', category: 'wooden', basePrice: 22000, image: 'assets/hero4.png', description: 'زخارف كلاسيكية فاخرة مع نقوش يدوية' },
+    { id: 1, name: 'Olive Wood', category: 'wooden', basePrice: 15000, image: 'assets/product3.jpeg', description: 'خشب طبيعي معالج ضد الرطوبة والحشرات' },
+    { id: 2, name: 'Forest Line', category: 'wooden', basePrice: 18000, image: 'assets/product4.jpeg', description: 'تصميم عصري بشرائح خشبية متحركة' },
+    { id: 3, name: 'Oak Shadow', category: 'wooden', basePrice: 22000, image: 'assets/product5.jpeg', description: 'زخارف كلاسيكية فاخرة مع نقوش يدوية' },
+    { id: 4, name: 'Palm Breeze', category: 'wooden', basePrice: 22000, image: 'assets/product6.jpeg', description: 'زخارف كلاسيكية فاخرة مع نقوش يدوية' },
+
     // Aluminum Pergolas
-    { id: 4, name: 'برجولة ألومنيوم بيوكلايماتيك', category: 'aluminum', basePrice: 35000, image: 'assets/product2.png', description: 'شرائح متحركة آلية مع ريموت كنترول' },
-    { id: 5, name: 'برجولة ألومنيوم مودرن', category: 'aluminum', basePrice: 28000, image: 'assets/hero2.png', description: 'ألومنيوم مقاوم للصدأ بتصميم عصري' },
-    { id: 6, name: 'برجولة ألومنيوم مع إضاءة LED', category: 'aluminum', basePrice: 32000, image: 'assets/hero3.png', description: 'نظام إضاءة LED مدمج مع ديمر' },
+    { id: 5, name: 'Royal Shade', category: 'aluminum', basePrice: 35000, image: 'assets/product2.png', description: 'شرائح متحركة آلية مع ريموت كنترول' },
+    { id: 6, name: 'Majestic', category: 'aluminum', basePrice: 28000, image: 'assets/product7.jpeg', description: 'ألومنيوم مقاوم للصدأ بتصميم عصري' },
+    { id: 7, name: 'Imperial LED', category: 'aluminum', basePrice: 32000, image: 'assets/product8.jpeg', description: 'نظام إضاءة LED مدمج مع ديمر' },
     // Steel Pergolas
-    { id: 7, name: 'برجولة حديد مشغول كلاسيك', category: 'steel', basePrice: 12000, image: 'assets/hero5.png', description: 'حديد مشغول يدويًا بطلاء مقاوم' },
-    { id: 8, name: 'برجولة حديد مودرن مينيمال', category: 'steel', basePrice: 14000, image: 'assets/hero3.png', description: 'تصميم بسيط وأنيق بخطوط نظيفة' },
+    { id: 8, name: 'برجولة حديد مشغول كلاسيك', category: 'steel', basePrice: 12000, image: 'assets/hero5.png', description: 'حديد مشغول يدويًا بطلاء مقاوم' },
+    { id: 9, name: 'برجولة حديد مودرن مينيمال', category: 'steel', basePrice: 14000, image: 'assets/hero3.png', description: 'تصميم بسيط وأنيق بخطوط نظيفة' },
     // Mixed / Premium
-    { id: 9, name: 'برجولة خشب وحديد فاخرة', category: 'premium', basePrice: 25000, image: 'assets/hero1.png', description: 'مزيج من الخشب الطبيعي والحديد المشغول' },
-    { id: 10, name: 'برجولة بريميوم مع سقف متحرك', category: 'premium', basePrice: 45000, image: 'assets/product2.png', description: 'سقف آلي متحرك مع حساسات مطر وريح' },
+    { id: 10, name: 'برجولة خشب وحديد فاخرة', category: 'premium', basePrice: 25000, image: 'assets/hero1.png', description: 'مزيج من الخشب الطبيعي والحديد المشغول' },
+    { id: 11, name: 'برجولة بريميوم مع سقف متحرك', category: 'premium', basePrice: 45000, image: 'assets/product2.png', description: 'سقف آلي متحرك مع حساسات مطر وريح' },
 ];
 
 // Dimension options & price additions for each product
 const dimensionOptions = [
     { label: '3×3 متر', value: '3x3', priceAdd: 0 },
-    { label: '4×4 متر', value: '4x4', priceAdd: 3500 },
-    { label: '5×5 متر', value: '5x5', priceAdd: 7000 },
+    { label: '3×4 متر', value: '3x4', priceAdd: 3500 },
+    { label: '4×4 متر', value: '4x4', priceAdd: 7000 },
 ];
 
 // Portfolio projects
 const portfolioProjects = [
-    { image: 'assets/portfolio1.png', title: 'فيلا التجمع الخامس', description: 'برجولة خشب طبيعي مع إضاءة ديكورية وحديقة متكاملة' },
-    { image: 'assets/portfolio2.png', title: 'روف تاون هاوس', description: 'برجولة ألومنيوم مع مطبخ خارجي ومنطقة جلوس' },
-    { image: 'assets/hero5.png', title: 'فيلا الشيخ زايد', description: 'برجولة بريميوم بجانب المسبح مع نظام إضاءة ذكي' },
-    { image: 'assets/hero2.png', title: 'بنتهاوس المعادي', description: 'برجولة روف مودرن بإطلالة بانورامية على النيل' },
+    { image: 'assets/portfolio3.jpeg', title: 'فيلا التجمع الخامس', description: 'برجولة خشب طبيعي مع إضاءة ديكورية وحديقة متكاملة' },
+    { image: 'assets/portfolio4.jpeg', title: 'روف تاون هاوس', description: 'برجولة خشبية فاخرة مع الجلسة الخارجية ومنطقة الجلوس' },
+    { image: 'assets/portfolio5.jpeg', title: 'فيلا الشيخ زايد', description: 'برجولة بريميوم لقاعات المناسبات سلسة وعملية' },
+    { image: 'assets/portfolio6.jpeg', title: 'بنتهاوس المعادي', description: 'برجولة روف مودرن بإطلالة بانورامية في المطاعم والكافيهات' },
 ];
 
 // Hero slider data
@@ -151,7 +153,7 @@ function renderCartPopupItems() {
     if (!cartPopupItems) return;
 
     if (cart.length === 0) {
-        cartPopupItems.innerHTML = '<p class="text-center text-gray-400 py-4">السلة فارغة</p>';
+        cartPopupItems.innerHTML = '<p class="text-center text-gray-400 py-4">جدول الزيارات فارغ</p>';
         return;
     }
 
@@ -339,7 +341,7 @@ function renderProducts() {
                     <button onclick="addToCart(${p.id})" data-add-cart="${p.id}"
                         class="btn-primary text-white px-5 py-2.5 rounded-xl text-sm font-bold flex items-center gap-2">
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/></svg>
-                        أضف للسلة
+                        احجز معاينة مجانية
                     </button>
                 </div>
             </div>
