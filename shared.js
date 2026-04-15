@@ -9,13 +9,16 @@ const products = [
     // Aluminum Pergolas
     { id: 5, name: 'Royal Shade', category: 'aluminum', basePrice: 35000, image: 'assets/product2.png', description: 'شرائح متحركة آلية مع ريموت كنترول' },
     { id: 6, name: 'Majestic', category: 'aluminum', basePrice: 28000, image: 'assets/product7.jpeg', description: 'ألومنيوم مقاوم للصدأ بتصميم عصري' },
-    { id: 7, name: 'Imperial LED', category: 'aluminum', basePrice: 32000, image: 'assets/product8.jpeg', description: 'نظام إضاءة LED مدمج مع ديمر' },
+    { id: 7, name: 'Imperial', category: 'aluminum', basePrice: 32000, image: 'assets/product8.jpeg', description: 'نظام إضاءة LED مدمج مع ديمر' },
     // Steel Pergolas
-    { id: 8, name: 'برجولة حديد مشغول كلاسيك', category: 'steel', basePrice: 12000, image: 'assets/hero5.png', description: 'حديد مشغول يدويًا بطلاء مقاوم' },
-    { id: 9, name: 'برجولة حديد مودرن مينيمال', category: 'steel', basePrice: 14000, image: 'assets/hero3.png', description: 'تصميم بسيط وأنيق بخطوط نظيفة' },
+    { id: 8, name: 'Ruby', category: 'steel', basePrice: 12000, image: 'assets/product10.jpeg', description: 'حديد مشغول يدويًا بطلاء مقاوم' },
+    { id: 9, name: 'Heaven', category: 'steel', basePrice: 14000, image: 'assets/product11.jpeg', description: 'تصميم بسيط وأنيق بخطوط نظيفة' },
     // Mixed / Premium
-    { id: 10, name: 'برجولة خشب وحديد فاخرة', category: 'premium', basePrice: 25000, image: 'assets/hero1.png', description: 'مزيج من الخشب الطبيعي والحديد المشغول' },
-    { id: 11, name: 'برجولة بريميوم مع سقف متحرك', category: 'premium', basePrice: 45000, image: 'assets/product2.png', description: 'سقف آلي متحرك مع حساسات مطر وريح' },
+    { id: 10, name: 'Emerald', category: 'premium', basePrice: 25000, image: 'assets/product12.jpeg', description: 'مزيج من الخشب الطبيعي والحديد المشغول' },
+    { id: 11, name: 'Golden', category: 'premium', basePrice: 45000, image: 'assets/product13.jpeg', description: 'سقف مميز مع لمسة عصرية' },
+    { id: 12, name: 'Crown', category: 'premium', basePrice: 25000, image: 'assets/product14.jpeg', description: 'مزيج من الخشب الطبيعي مع المعدن المشغول' },
+    { id: 13, name: 'Elite', category: 'premium', basePrice: 25000, image: 'assets/product15.jpeg', description: 'مزيج من الخشب الطبيعي مع المعدن المشغول' },
+
 ];
 
 // Dimension options & price additions for each product
