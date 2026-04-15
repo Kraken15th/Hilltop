@@ -36,8 +36,8 @@ const portfolioProjects = [
 
 // Hero slider data
 const heroSlides = [
-    { image: 'assets/hero1.png', title: 'صمم مساحتك الخارجية', subtitle: 'برجولات خشبية فاخرة بتصميمات فريدة تناسب ذوقك' },
-    { image: 'assets/hero2.png', title: 'أناقة بلا حدود', subtitle: 'برجولات ألومنيوم مودرن بأعلى معايير الجودة' },
+    { image: 'assets/hero12.jpeg', title: 'صمم مساحتك الخارجية', subtitle: 'برجولات خشبية فاخرة بتصميمات فريدة تناسب ذوقك' },
+    { image: 'assets/hero22.jpeg', title: 'أناقة بلا حدود', subtitle: 'برجولات ألومنيوم مودرن بأعلى معايير الجودة' },
     { image: 'assets/hero3.png', title: 'استمتع بالهواء الطلق', subtitle: 'تصميمات عصرية مع إضاءة ديكورية مميزة' },
     { image: 'assets/hero4.png', title: 'لمسة طبيعية ساحرة', subtitle: 'برجولات كلاسيكية مع نباتات متسلقة وزهور طبيعية' },
     { image: 'assets/hero5.png', title: 'رفاهية لا تُضاهى', subtitle: 'مشاريع فاخرة بجانب المسابح والحدائق' },
