@@ -1,30 +1,96 @@
 // ===================== PRODUCTS DATA =====================
 const products = [
     // Wooden Pergolas
-    { id: 1, name: 'Oak Shadow', category: 'wooden', basePrice: 22000, image: 'assets/product5.jpeg', description: 'زخارف كلاسيكية فاخرة مع نقوش يدوية' },
-    { id: 2, name: 'Olive Wood', category: 'wooden', basePrice: 15000, image: 'assets/product3.jpeg', description: 'خشب طبيعي معالج ضد الرطوبة والحشرات' },
-    { id: 3, name: 'Forest Line', category: 'wooden', basePrice: 18000, image: 'assets/product4.jpeg', description: 'تصميم عصري بشرائح خشبية متحركة' },
-    { id: 4, name: 'Palm Breeze', category: 'wooden', basePrice: 22000, image: 'assets/product6.jpeg', description: 'زخارف كلاسيكية فاخرة مع نقوش يدوية' },
+    { id: 1, name: 'Oak Shadow', category: 'wooden', basePrice: 39000, image: 'assets/product5.jpeg', description: 'زخارف كلاسيكية فاخرة مع نقوش يدوية' },
+    { id: 2, name: 'Olive Wood', category: 'wooden', basePrice: 45000, image: 'assets/product3.jpeg', description: 'خشب طبيعي معالج ضد الرطوبة والحشرات' },
+    { id: 3, name: 'Forest Line', category: 'wooden', basePrice: 35000, image: 'assets/product4.jpeg', description: 'تصميم عصري pattern من المعدن والخشب الطبيعي' },
+    { id: 4, name: 'Palm Breeze', category: 'wooden', basePrice: 42000, image: 'assets/product6.jpeg', description: 'برجولة مودرن من الشرائح الكلاسيكية' },
     // Aluminum Pergolas
-    { id: 5, name: 'Royal Shade', category: 'aluminum', basePrice: 35000, image: 'assets/product2.png', description: 'شرائح متحركة آلية مع ريموت كنترول' },
-    { id: 6, name: 'Majestic', category: 'aluminum', basePrice: 28000, image: 'assets/product7.jpeg', description: 'ألومنيوم مقاوم للصدأ بتصميم عصري' },
-    { id: 7, name: 'Imperial', category: 'aluminum', basePrice: 32000, image: 'assets/product8.jpeg', description: 'نظام إضاءة LED مدمج مع ديمر' },
+    { id: 5, name: 'Royal Shade', category: 'aluminum', basePrice: 63000, image: 'assets/product2.png', description: 'شرائح الومنيوم بقوائم معدنية ومتاح تغيير الألوان' },
+    { id: 6, name: 'Majestic', category: 'aluminum', basePrice: 57000, image: 'assets/product7.jpeg', description: 'ألومنيوم مقاوم للصدأ بتصميم عصري' },
+    { id: 7, name: 'Imperial', category: 'aluminum', basePrice: 58000, image: 'assets/product8.jpeg', description: 'برجولة من الالومنيوم بستائر وإضاءة LED Profile' },
     // Steel Pergolas
-    { id: 8, name: 'Ruby', category: 'steel', basePrice: 12000, image: 'assets/product10.jpeg', description: 'حديد مشغول يدويًا بطلاء مقاوم' },
-    { id: 9, name: 'Heaven', category: 'steel', basePrice: 14000, image: 'assets/product11.jpeg', description: 'تصميم بسيط وأنيق بخطوط نظيفة' },
+    { id: 8, name: 'Ruby', category: 'steel', basePrice: 42000, image: 'assets/product10.jpeg', description: 'حديد الكتروستاتيك مقاوم وخشب طبيعي' },
+    { id: 9, name: 'Heaven', category: 'wooden', basePrice: 42000, image: 'assets/product11.jpeg', description: 'تصميم بسيط وأنيق بخطوط راقية' },
     // Mixed / Premium
-    { id: 10, name: 'Emerald', category: 'premium', basePrice: 25000, image: 'assets/product12.jpeg', description: 'مزيج من الخشب الطبيعي والحديد المشغول' },
-    { id: 11, name: 'Golden', category: 'premium', basePrice: 45000, image: 'assets/product13.jpeg', description: 'سقف مميز مع لمسة عصرية' },
-    { id: 12, name: 'Crown', category: 'premium', basePrice: 25000, image: 'assets/product14.jpeg', description: 'مزيج من الخشب الطبيعي مع المعدن المشغول' },
-    { id: 13, name: 'Elite', category: 'premium', basePrice: 25000, image: 'assets/product15.jpeg', description: 'مزيج من الخشب الطبيعي مع المعدن المشغول' },
+    { id: 10, name: 'Emerald', category: 'premium', basePrice: 130000, image: 'assets/product12.jpeg', description: 'مزيج من الخشب WPC والالومنيوم' },
+    { id: 11, name: 'Golden', category: 'premium', basePrice: 32000, image: 'assets/product13.jpeg', description: 'سقف مميز مع لمسة عصرية' },
+    { id: 12, name: 'Crown', category: 'wooden', basePrice: 30000, image: 'assets/product14.jpeg', description: 'برجولة فخمة من الخشب الطبيعي' },
+    { id: 13, name: 'Elite', category: 'wooden', basePrice: 40000, image: 'assets/product15.jpeg', description: 'برجولة متداخلة من الخشب الطبيعي المعالج' },
 ];
 
-// Dimension options & price additions for each product
-const dimensionOptions = [
-    { label: '3×3 متر', value: '3x3', priceAdd: 0 },
-    { label: '3×4 متر', value: '3x4', priceAdd: 3500 },
-    { label: '4×4 متر', value: '4x4', priceAdd: 7000 },
-];
+// Dimension options & price additions for each product (keyed by product id)
+const dimensionOptions = {
+    // Wooden Pergolas
+    1: [
+        { label: '3×3 متر', value: '3x3', priceAdd: 0 },
+        { label: '3×4 متر', value: '3x4', priceAdd: 8000 },
+        { label: '4×4 متر', value: '4x4', priceAdd: 17000 },
+    ],
+    2: [
+        { label: '3×3 متر', value: '3x3', priceAdd: 0 },
+        { label: '3×4 متر', value: '3x4', priceAdd: 13000 },
+        { label: '4×4 متر', value: '4x4', priceAdd: 24000 },
+    ],
+    3: [
+        { label: '3×3 متر', value: '3x3', priceAdd: 0 },
+        { label: '3×4 متر', value: '3x4', priceAdd: 10000 },
+        { label: '4×4 متر', value: '4x4', priceAdd: 25000 },
+    ],
+    4: [
+        { label: '3×3 متر', value: '3x3', priceAdd: 0 },
+        { label: '3×4 متر', value: '3x4', priceAdd: 8000 },
+        { label: '4×4 متر', value: '4x4', priceAdd: 14000 },
+    ],
+    // Aluminum Pergolas
+    5: [
+        { label: '3×3 متر', value: '3x3', priceAdd: 0 },
+        { label: '3×4 متر', value: '3x4', priceAdd: 22000 },
+        { label: '4×4 متر', value: '4x4', priceAdd: 52000 },
+    ],
+    6: [
+        { label: '3×3 متر', value: '3x3', priceAdd: 0 },
+        { label: '3×4 متر', value: '3x4', priceAdd: 9000 },
+        { label: '4×4 متر', value: '4x4', priceAdd: 21000 },
+    ],
+    7: [
+        { label: '3×3 متر', value: '3x3', priceAdd: 0 },
+        { label: '3×4 متر', value: '3x4', priceAdd: 12000 },
+        { label: '4×4 متر', value: '4x4', priceAdd: 23000 },
+    ],
+    // Steel Pergolas
+    8: [
+        { label: '3×3 متر', value: '3x3', priceAdd: 0 },
+        { label: '3×4 متر', value: '3x4', priceAdd: 13000 },
+        { label: '4×4 متر', value: '4x4', priceAdd: 23000 },
+    ],
+    9: [
+        { label: '3×3 متر', value: '3x3', priceAdd: 0 },
+        { label: '3×4 متر', value: '3x4', priceAdd: 9000 },
+        { label: '4×4 متر', value: '4x4', priceAdd: 18000 },
+    ],
+    // Mixed / Premium
+    10: [
+        { label: '3×3 متر', value: '3x3', priceAdd: 0 },
+        { label: '3×4 متر', value: '3x4', priceAdd: 30000 },
+        { label: '4×4 متر', value: '4x4', priceAdd: 75000 },
+    ],
+    11: [
+        { label: '3×3 متر', value: '3x3', priceAdd: 0 },
+        { label: '3×4 متر', value: '3x4', priceAdd: 13000 },
+        { label: '4×4 متر', value: '4x4', priceAdd: 23000 },
+    ],
+    12: [
+        { label: '3×3 متر', value: '3x3', priceAdd: 0 },
+        { label: '3×4 متر', value: '3x4', priceAdd: 8000 },
+        { label: '4×4 متر', value: '4x4', priceAdd: 15000 },
+    ],
+    13: [
+        { label: '3×3 متر', value: '3x3', priceAdd: 0 },
+        { label: '3×4 متر', value: '3x4', priceAdd: 14000 },
+        { label: '4×4 متر', value: '4x4', priceAdd: 32000 },
+    ],
+};
 
 // Portfolio projects
 const portfolioProjects = [
@@ -53,8 +119,9 @@ function addToCart(productId) {
 
     // Get selected dimension
     const selectedRadio = document.querySelector(`input[name="dim-${productId}"]:checked`);
-    const selectedDim = selectedRadio ? selectedRadio.value : '3x3';
-    const dimOption = dimensionOptions.find(d => d.value === selectedDim);
+    const productDims = dimensionOptions[productId];
+    const selectedDim = selectedRadio ? selectedRadio.value : productDims[0].value;
+    const dimOption = productDims.find(d => d.value === selectedDim);
     const finalPrice = product.basePrice + dimOption.priceAdd;
 
     const existingItem = cart.find(item => item.id === productId && item.dimension === selectedDim);
@@ -214,7 +281,7 @@ function updatePrice(productId) {
     if (!selectedRadio) return;
 
     const product = products.find(p => p.id === productId);
-    const dimOption = dimensionOptions.find(d => d.value === selectedRadio.value);
+    const dimOption = dimensionOptions[productId].find(d => d.value === selectedRadio.value);
     const finalPrice = product.basePrice + dimOption.priceAdd;
 
     const priceEl = document.getElementById(`price-${productId}`);
@@ -323,7 +390,7 @@ function renderProducts() {
                 
                 <div class="space-y-2 mb-4">
                     <p class="text-xs font-bold text-gray-600 mb-1">اختر المقاس:</p>
-                    ${dimensionOptions.map((dim, i) => `
+                    ${(dimensionOptions[p.id] || []).map((dim, i) => `
                         <label class="flex items-center gap-3 cursor-pointer group/dim p-2 rounded-lg hover:bg-teal-50 transition-colors">
                             <input type="radio" name="dim-${p.id}" value="${dim.value}" ${i === 0 ? 'checked' : ''} 
                                 onchange="updatePrice(${p.id})"
