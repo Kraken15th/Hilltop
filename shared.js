@@ -422,7 +422,7 @@ function getCategoryLabel(category) {
         wooden: 'خشب طبيعي',
         aluminum: 'ألومنيوم',
         steel: 'حديد مشغول',
-        premium: 'خشب WPC',
+        premium: 'Pitch Pine',
     };
     return labels[category] || category;
 }
