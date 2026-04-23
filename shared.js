@@ -2,11 +2,11 @@
 const products = [
     // Wooden Pergolas
     { id: 1, name: 'Chess Board', category: 'wooden', basePrice: 29250, image: 'assets/product16.jpeg', description: 'فخامة كلاسيكية مع شكل لوح الشطرنج المميز' },
-    { id: 2, name: 'Solid Type', category: 'wooden', basePrice: 31000, image: 'assets/product17.jpeg', description: 'خشب طبيعي معالج ضد الرطوبة والحشرات' },
+    { id: 2, name: 'Solid Type', category: 'wooden', basePrice: 31000, image: 'assets/product19.jpeg', description: 'خشب طبيعي معالج ضد الرطوبة والحشرات' },
     { id: 3, name: 'Forest Line', category: 'wooden', basePrice: 35000, image: 'assets/product4.jpeg', description: 'تصميم عصري pattern من المعدن والخشب الطبيعي' },
     { id: 4, name: 'Palm Breeze', category: 'wooden', basePrice: 42000, image: 'assets/product6.jpeg', description: 'برجولة مودرن من الشرائح الكلاسيكية' },
-    { id: 5, name: 'Pitch Pine', category: 'wooden', basePrice: 92200, image: 'assets/product18.jpeg', description: 'تصميم مميز لعشاق الستائر الظلية الخشبية' },
-    { id: 6, name: 'Wave Sail', category: 'wooden', basePrice: 32900, image: 'assets/product19.jpeg', description: 'أناقة عصرية لإطارات شراعية مموجة' },
+    { id: 5, name: 'Pitch Pine', category: 'wooden', basePrice: 92200, image: 'assets/product17.jpeg', description: 'تصميم مميز لعشاق الستائر الظلية الخشبية' },
+    { id: 6, name: 'Wave Sail', category: 'wooden', basePrice: 32900, image: 'assets/product18.jpeg', description: 'أناقة عصرية لإطارات شراعية مموجة' },
 
     // Aluminum Pergolas
     { id: 7, name: 'Royal Shade', category: 'aluminum', basePrice: 63000, image: 'assets/product2.png', description: 'شرائح الومنيوم بقوائم معدنية ومتاح تغيير الألوان' },
