@@ -1,22 +1,25 @@
 // ===================== PRODUCTS DATA =====================
 const products = [
     // Wooden Pergolas
-    { id: 1, name: 'Oak Shadow', category: 'wooden', basePrice: 39000, image: 'assets/product5.jpeg', description: 'زخارف كلاسيكية فاخرة مع نقوش يدوية' },
-    { id: 2, name: 'Olive Wood', category: 'wooden', basePrice: 45000, image: 'assets/product3.jpeg', description: 'خشب طبيعي معالج ضد الرطوبة والحشرات' },
+    { id: 1, name: 'Chess Board', category: 'wooden', basePrice: 29250, image: 'assets/product16.jpeg', description: 'فخامة كلاسيكية مع شكل لوح الشطرنج المميز' },
+    { id: 2, name: 'Solid Type', category: 'wooden', basePrice: 31000, image: 'assets/product17.jpeg', description: 'خشب طبيعي معالج ضد الرطوبة والحشرات' },
     { id: 3, name: 'Forest Line', category: 'wooden', basePrice: 35000, image: 'assets/product4.jpeg', description: 'تصميم عصري pattern من المعدن والخشب الطبيعي' },
     { id: 4, name: 'Palm Breeze', category: 'wooden', basePrice: 42000, image: 'assets/product6.jpeg', description: 'برجولة مودرن من الشرائح الكلاسيكية' },
+    { id: 5, name: 'Pitch Pine', category: 'wooden', basePrice: 92200, image: 'assets/product18.jpeg', description: 'أناقة عصرية لإطارات شراعية مموجة' },
+    { id: 6, name: 'Wave Sail', category: 'wooden', basePrice: 32900, image: 'assets/product19.jpeg', description: 'برجولة مودرن من الشرائح الكلاسيكية' },
+
     // Aluminum Pergolas
-    { id: 5, name: 'Royal Shade', category: 'aluminum', basePrice: 63000, image: 'assets/product2.png', description: 'شرائح الومنيوم بقوائم معدنية ومتاح تغيير الألوان' },
-    { id: 6, name: 'Majestic', category: 'aluminum', basePrice: 57000, image: 'assets/product7.jpeg', description: 'ألومنيوم مقاوم للصدأ بتصميم عصري' },
-    { id: 7, name: 'Imperial', category: 'aluminum', basePrice: 58000, image: 'assets/product8.jpeg', description: 'برجولة من الالومنيوم بستائر وإضاءة LED Profile' },
+    { id: 7, name: 'Royal Shade', category: 'aluminum', basePrice: 63000, image: 'assets/product2.png', description: 'شرائح الومنيوم بقوائم معدنية ومتاح تغيير الألوان' },
+    { id: 8, name: 'Majestic', category: 'aluminum', basePrice: 57000, image: 'assets/product7.jpeg', description: 'ألومنيوم مقاوم للصدأ بتصميم عصري' },
+    { id: 9, name: 'Imperial', category: 'aluminum', basePrice: 58000, image: 'assets/product8.jpeg', description: 'برجولة من الالومنيوم بستائر وإضاءة LED Profile' },
     // Steel Pergolas
-    { id: 8, name: 'Ruby', category: 'steel', basePrice: 42000, image: 'assets/product10.jpeg', description: 'حديد الكتروستاتيك مقاوم وخشب طبيعي' },
-    { id: 9, name: 'Heaven', category: 'wooden', basePrice: 42000, image: 'assets/product11.jpeg', description: 'تصميم بسيط وأنيق بخطوط راقية' },
+    { id: 10, name: 'Ruby', category: 'steel', basePrice: 42000, image: 'assets/product10.jpeg', description: 'حديد الكتروستاتيك مقاوم وخشب طبيعي' },
+    { id: 11, name: 'Heaven', category: 'wooden', basePrice: 42000, image: 'assets/product11.jpeg', description: 'تصميم بسيط وأنيق بخطوط راقية' },
     // Mixed / Premium
-    { id: 10, name: 'Emerald', category: 'premium', basePrice: 130000, image: 'assets/product12.jpeg', description: 'مزيج من الخشب WPC والالومنيوم' },
-    { id: 11, name: 'Golden', category: 'premium', basePrice: 32000, image: 'assets/product13.jpeg', description: 'سقف مميز مع لمسة عصرية' },
-    { id: 12, name: 'Crown', category: 'wooden', basePrice: 30000, image: 'assets/product14.jpeg', description: 'برجولة فخمة من الخشب الطبيعي' },
-    { id: 13, name: 'Elite', category: 'wooden', basePrice: 40000, image: 'assets/product15.jpeg', description: 'برجولة متداخلة من الخشب الطبيعي المعالج' },
+    { id: 12, name: 'Emerald', category: 'premium', basePrice: 130000, image: 'assets/product12.jpeg', description: 'مزيج من الخشب WPC والالومنيوم' },
+    { id: 13, name: 'Golden', category: 'premium', basePrice: 32000, image: 'assets/product13.jpeg', description: 'سقف مميز مع لمسة عصرية' },
+    { id: 14, name: 'Crown', category: 'wooden', basePrice: 30000, image: 'assets/product14.jpeg', description: 'برجولة فخمة من الخشب الطبيعي' },
+    { id: 15, name: 'Elite', category: 'wooden', basePrice: 40000, image: 'assets/product15.jpeg', description: 'برجولة متداخلة من الخشب الطبيعي المعالج' },
 ];
 
 // Dimension options & price additions for each product (keyed by product id)
@@ -24,13 +27,13 @@ const dimensionOptions = {
     // Wooden Pergolas
     1: [
         { label: '3×3 متر', value: '3x3', priceAdd: 0 },
-        { label: '3×4 متر', value: '3x4', priceAdd: 8000 },
-        { label: '4×4 متر', value: '4x4', priceAdd: 17000 },
+        { label: '3×4 متر', value: '3x4', priceAdd: 1950 },
+        { label: '4×4 متر', value: '4x4', priceAdd: 5750 },
     ],
     2: [
         { label: '3×3 متر', value: '3x3', priceAdd: 0 },
-        { label: '3×4 متر', value: '3x4', priceAdd: 13000 },
-        { label: '4×4 متر', value: '4x4', priceAdd: 24000 },
+        { label: '3×4 متر', value: '3x4', priceAdd: 3500 },
+        { label: '4×4 متر', value: '4x4', priceAdd: 8000 },
     ],
     3: [
         { label: '3×3 متر', value: '3x3', priceAdd: 0 },
@@ -42,50 +45,61 @@ const dimensionOptions = {
         { label: '3×4 متر', value: '3x4', priceAdd: 8000 },
         { label: '4×4 متر', value: '4x4', priceAdd: 14000 },
     ],
-    // Aluminum Pergolas
+
     5: [
+        { label: '3×3 متر', value: '3x3', priceAdd: 0 },
+        { label: '3×4 متر', value: '3x4', priceAdd: 14800 },
+        { label: '4×4 متر', value: '4x4', priceAdd: 33300 },
+    ],
+    6: [
+        { label: '3×3 متر', value: '3x3', priceAdd: 0 },
+        { label: '3×4 متر', value: '3x4', priceAdd: 3000 },
+        { label: '4×4 متر', value: '4x4', priceAdd: 6100 },
+    ],
+    // Aluminum Pergolas
+    7: [
         { label: '3×3 متر', value: '3x3', priceAdd: 0 },
         { label: '3×4 متر', value: '3x4', priceAdd: 22000 },
         { label: '4×4 متر', value: '4x4', priceAdd: 52000 },
     ],
-    6: [
+    8: [
         { label: '3×3 متر', value: '3x3', priceAdd: 0 },
         { label: '3×4 متر', value: '3x4', priceAdd: 9000 },
         { label: '4×4 متر', value: '4x4', priceAdd: 21000 },
     ],
-    7: [
+    9: [
         { label: '3×3 متر', value: '3x3', priceAdd: 0 },
         { label: '3×4 متر', value: '3x4', priceAdd: 12000 },
         { label: '4×4 متر', value: '4x4', priceAdd: 23000 },
     ],
     // Steel Pergolas
-    8: [
+    10: [
         { label: '3×3 متر', value: '3x3', priceAdd: 0 },
         { label: '3×4 متر', value: '3x4', priceAdd: 13000 },
         { label: '4×4 متر', value: '4x4', priceAdd: 23000 },
     ],
-    9: [
+    11: [
         { label: '3×3 متر', value: '3x3', priceAdd: 0 },
         { label: '3×4 متر', value: '3x4', priceAdd: 9000 },
         { label: '4×4 متر', value: '4x4', priceAdd: 18000 },
     ],
     // Mixed / Premium
-    10: [
+    12: [
         { label: '3×3 متر', value: '3x3', priceAdd: 0 },
         { label: '3×4 متر', value: '3x4', priceAdd: 30000 },
         { label: '4×4 متر', value: '4x4', priceAdd: 75000 },
     ],
-    11: [
+    13: [
         { label: '3×3 متر', value: '3x3', priceAdd: 0 },
         { label: '3×4 متر', value: '3x4', priceAdd: 13000 },
         { label: '4×4 متر', value: '4x4', priceAdd: 23000 },
     ],
-    12: [
+    14: [
         { label: '3×3 متر', value: '3x3', priceAdd: 0 },
         { label: '3×4 متر', value: '3x4', priceAdd: 8000 },
         { label: '4×4 متر', value: '4x4', priceAdd: 15000 },
     ],
-    13: [
+    15: [
         { label: '3×3 متر', value: '3x3', priceAdd: 0 },
         { label: '3×4 متر', value: '3x4', priceAdd: 14000 },
         { label: '4×4 متر', value: '4x4', priceAdd: 32000 },
